@@ -179,3 +179,7 @@ src/
 - **Injection token errors**: Avoid using `import type` for injectable services; use regular imports.  
 - **Lazy loading errors**: Verify module and routing module names and exports match exactly.  
 - **Build errors**: Delete `node_modules` and reinstall dependencies if needed.
+
+![image](https://github.com/user-attachments/assets/6960e78c-7c89-417e-bf7d-57a400ba4141)
+![image](https://github.com/user-attachments/assets/c3a9b985-35cc-46a9-b2a4-ff78bc761751)
+
