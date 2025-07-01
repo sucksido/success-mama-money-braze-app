@@ -1,0 +1,9 @@
+<ion-button fill="clear" (click)="navigateToInbox()" class="inbox-button">
+  <ion-icon name="notifications" [class.has-notifications]="unreadCount > 0"></ion-icon>
+  <ion-badge 
+    *ngIf="unreadCount > 0" 
+    color="danger" 
+    class="notification-badge">
+    {{ unreadCount > 99 ? '99+' : unreadCount }}
+  </ion-badge>
+</ion-button>

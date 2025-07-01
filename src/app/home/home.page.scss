@@ -1,0 +1,38 @@
+#container {
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-section {
+  margin-bottom: 2rem;
+  
+  h1 {
+    color: var(--ion-color-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    color: var(--ion-color-medium);
+    font-size: 1.1rem;
+  }
+}
+
+.test-section {
+  margin-top: 2rem;
+  
+  ion-card {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  
+  .help-text {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--ion-color-medium);
+    text-align: left;
+  }
+}
+
+ion-button {
+  margin: 1rem 0;
+}

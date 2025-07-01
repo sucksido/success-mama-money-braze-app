@@ -1,0 +1,38 @@
+.inbox-button {
+  position: relative;
+  
+  ion-icon {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    
+    &.has-notifications {
+      color: var(--ion-color-primary);
+      animation: pulse 2s infinite;
+    }
+  }
+  
+  .notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    min-width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

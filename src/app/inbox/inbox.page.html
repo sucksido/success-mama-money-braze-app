@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="onRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div class="inbox-container">
+    <div *ngIf="inboxCards.length === 0" class="empty-state">
+      <ion-icon name="notifications-outline" class="empty-icon"></ion-icon>
+      <h3>No notifications</h3>
+      <p>You're all caught up! New notifications will appear here.</p>
+    </div>
+
+    <div *ngIf="inboxCards.length > 0" class="cards-list">
+      <div 
+        *ngFor="let card of inboxCards; trackBy: trackByCardId"
+        class="notification-card"
+        [class.unread]="!card.viewed"
+        (click)="onCardClick(card)">
+        
+        <div class="card-content">
+          <div class="card-icon">
+            <div class="icon-circle">
+              <ion-icon [name]="card.icon || 'notifications'"></ion-icon>
+            </div>
+          </div>
+          
+          <div class="card-body">
+            <h3 class="card-title">{{ card.title }}</h3>
+            <p class="card-description">{{ card.description }}</p>
+            <span class="card-timestamp">{{ card.timestamp }}</span>
+          </div>
+          
+          <div class="card-actions">
+            <ion-button 
+              fill="clear" 
+              color="danger"
+              class="delete-button"
+              (click)="onDeleteCard(card, $event)">
+              <ion-icon name="close" slot="icon-only"></ion-icon>
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

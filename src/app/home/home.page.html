@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Mama Money
+    </ion-title>
+    <ion-buttons slot="end">
+      <app-inbox-button></app-inbox-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Mama Money</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <div class="welcome-section">
+      <h1>Welcome to Mama Money</h1>
+      <p>Test the push notification and inbox system</p>
+    </div>
+
+    <div class="test-section">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Test Inbox Notifications</ion-card-title>
+          <ion-card-subtitle>Send a test event to trigger push notification</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-button 
+            expand="block" 
+            (click)="sendInboxTestEvent()"
+            color="primary">
+            <ion-icon name="send" slot="start"></ion-icon>
+            Send Test Event
+          </ion-button>
+          <p class="help-text">
+            This will send an "INBOX_MESSAGE_TEST" event to Braze, which should trigger a push notification 
+            and add a new content card to your inbox.
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
