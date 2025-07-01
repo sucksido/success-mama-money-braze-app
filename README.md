@@ -16,9 +16,7 @@ An Ionic Angular application integrating Braze push notifications and inbox feat
 - [Building APK](#building-apk)  
 - [Project Structure](#project-structure)  
 - [Services](#services)  
-- [Troubleshooting](#troubleshooting)  
-- [Contributing](#contributing)  
-- [License](#license)
+- [Troubleshooting](#troubleshooting) 
 
 ---
 
